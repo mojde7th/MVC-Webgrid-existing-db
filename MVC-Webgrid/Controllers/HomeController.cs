@@ -8,11 +8,17 @@ namespace MVC_Webgrid.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+       
+      public ActionResult Index()
         {
             return View();
         }
 
+        public ActionResult but()
+        {
+            SampleDBEntities sd = new SampleDBEntities();
+            return View(sd.users.Where(x => x.username.Contains("22")).ToList());
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
