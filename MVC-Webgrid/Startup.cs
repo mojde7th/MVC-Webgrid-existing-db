@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin;
+﻿
+using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(MVC_Webgrid.Startup))]
@@ -9,6 +10,9 @@ namespace MVC_Webgrid
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+           
         }
+
+        
     }
 }

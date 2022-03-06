@@ -20,6 +20,8 @@ namespace MVC_Webgrid.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        internal static object fi;
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

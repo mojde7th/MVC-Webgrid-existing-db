@@ -13,10 +13,10 @@ namespace MVC_Webgrid
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SampleDBEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public SampleDBEntities()
-            : base("name=SampleDBEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace MVC_Webgrid
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<user> users { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
     }
 }

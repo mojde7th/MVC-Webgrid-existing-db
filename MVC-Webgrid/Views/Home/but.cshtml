@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MVC_Webgrid.user>
+﻿@model IEnumerable<MVC_Webgrid.AspNetUser>
 @{
     ViewBag.Title = "but";
 }
@@ -12,7 +12,8 @@
 @wbgrid.GetHtml(
     tableStyle: "table",
     htmlAttributes: new { @id = "wbgrid" },
-    columns: wbgrid.Columns(wbgrid.Column("id", "id"),
-    wbgrid.Column("username", "username"),
-    wbgrid.Column("password", "password")))
+    columns: wbgrid.Columns(wbgrid.Column("Id", "id")
+   ))
 
+    // wbgrid.Column("username", "username"),
+    //wbgrid.Column("password", "password"))
